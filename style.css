@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('./fonts/comic-neue-v8-latin-regular.woff2') format('woff2'),
+         url('./fonts/comic-neue-v8-latin-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('./fonts/comic-neue-v8-latin-700.woff2') format('woff2'),
+         url('./fonts/comic-neue-v8-latin-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #4ade80;
+    --secondary-color: #3b82f6;
+    --accent-color: #fbbf24;
+}
+
+body {
+    font-family: 'Comic Neue', Arial, sans-serif;
+    background: #e0f7ef; /* vorher: #f9f7f4 */
+    margin: 0;
+    color: #222;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+    padding: 2rem 0;
+    background-image: url('./image/bg.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+    pointer-events: none;
+}
+
+.main-text {
+    max-width: 700px;
+    margin: 2.5rem auto 2rem auto;
+    background: #f6fff9; /* sanftes Grün statt weiß */
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(76,220,196,0.08);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.main-text h2 {
+    color: #3b82f6;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.main-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0 1.2rem 0;
+}
+
+.main-text ul li {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+}
+
+.main-text strong {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.banner-img {
+    width: 100%;
+    display: block;
+    max-height: 900px;
+    object-fit: cover;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0 1.5rem 0;
+    flex-wrap: wrap;
+}
+.feature {
+    background: #f6fff9; /* sanftes Grün statt weiß */
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(76,220,196,0.08);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.2s;
+}
+.feature:hover {
+    transform: translateY(-6px) scale(1.04);
+}
+.feature span {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.feature h2 {
+    margin: 0.5rem 0 0.3rem 0;
+    color: #3b82f6;
+    font-size: 1.3rem;
+}
+
+.products {
+    background: #e0f7ef;
+    padding: 3rem 0 2rem 0;
+}
+.products h2 {
+    text-align: center;
+    color: #4ade80;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.product-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-card {
+    background: #f6fff9; /* sanftes Grün statt weiß */
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 16px rgba(59,130,246,0.07);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+.product-card h3 {
+    margin: 1rem 0 0.5rem 0;
+    color: #3b82f6;
+    font-size: 1.2rem;
+}
+.product-card p {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+}
+.buy-btn {
+    background: linear-gradient(90deg, #4ade80 60%, #3b82f6 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(76,220,196,0.10);
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+}
+.buy-btn:hover {
+    background: linear-gradient(90deg, #3b82f6 60%, #4ade80 100%);
+    transform: scale(1.06);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}

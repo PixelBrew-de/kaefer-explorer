@@ -1,16 +1,15 @@
-
 @font-face {
     font-family: 'Comic Neue';
-    src: url('./Schriftarten/comic-neue-v8-latin-regular.woff2') format('woff2'),
-         url('./Schriftarten/comic-neue-v8-latin-regular.ttf') format('truetype');
+    src: url('./fonts/comic-neue-v8-latin-regular.woff2') format('woff2'),
+         url('./fonts/comic-neue-v8-latin-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Comic Neue';
-    src: url('./Schriftarten/comic-neue-v8-latin-700.woff2') format('woff2'),
-         url('./Schriftarten/comic-neue-v8-latin-700.ttf') format('truetype');
+    src: url('./fonts/comic-neue-v8-latin-700.woff2') format('woff2'),
+         url('./fonts/comic-neue-v8-latin-700.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -34,7 +33,7 @@ body {
     width: 100%;
     min-height: 900px;
     padding: 2rem 0;
-    background-image: url('./Bilder/bg.svg');
+    background-image: url('./image/bg.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

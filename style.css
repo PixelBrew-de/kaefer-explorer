@@ -33,7 +33,11 @@ body {
     width: 100%;
     min-height: 900px;
     padding: 2rem 0;
+<<<<<<< HEAD
     background-image: url('./image/bg.svg');
+=======
+    background-image: url('./Bild/bg.svg');
+>>>>>>> b09825d9ff1b3cde6fb60b85c7c46e700e6c72af
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -8,7 +8,6 @@
     <meta name="keywords" content="Käfer, Insekten, Kinder, Natur, Forscher-Set, Becherlupe, Abenteuer, Sammeln, Entdecken, Affiliate, Amazon">
     <meta name="author" content="Käfer-Explorer Team">
     <link rel="canonical" href="https://www.kaefer-explorer.de/">
-    <link rel="stylesheet" href="style.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Käfer-Explorer | Entdecke & Sammle!">
     <meta property="og:description" content="Käfer-Explorer: Entdecke, beobachte und sammle Insekten. Die besten Forscher-Sets und Käfergläser für Kinder – jetzt Abenteuer starten!">
@@ -19,11 +18,13 @@
     <meta name="twitter:title" content="Käfer-Explorer | Entdecke & Sammle!">
     <meta name="twitter:description" content="Käfer-Explorer: Entdecke, beobachte und sammle Insekten. Die besten Forscher-Sets und Käfergläser für Kinder – jetzt Abenteuer starten!">
     <meta name="twitter:image" content="image/bg.svg">
+    <link rel="preload" href="image/bg.svg" as="image" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Banner -->
     <header class="banner">
-        <img src="./image/bg.svg" alt="Käfer Abenteuer Banner" class="banner-img">
+        <img src="./image/bg.svg" alt="Käfer Abenteuer Banner" class="banner-img" loading="eager" fetchpriority="high">
     </header>
 
     <!-- Main Text -->

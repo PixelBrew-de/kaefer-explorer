@@ -99,9 +99,9 @@ body {
 .products {
   background: var(--accent-color);
   padding: 3rem 0 2rem 0;
-  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
-  margin: 100px 325px 100px 325px;
-
+  border-radius: 1.5rem;
+  /* Entferne feste Margins für bessere Responsivität */
+  margin: 2rem 1rem;
 }
 .products h2 {
   text-align: center;
@@ -115,6 +115,58 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* Responsives Layout für die Produktkarten */
+@media (max-width: 900px) {
+  .products {
+    margin: 2rem 0.5rem;
+    padding: 2rem 0 1rem 0;
+  }
+  .product-list {
+    gap: 1rem;
+  }
+  .product-card {
+    width: 90vw;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-text {
+    margin: 10vh 0.5rem 1rem 0.5rem;
+    padding: 1.2rem 0.5rem;
+    font-size: 1rem;
+  }
+  .products {
+    margin: 1rem 0.2rem;
+    padding: 1rem 0 0.5rem 0;
+    border-radius: 1rem;
+  }
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .product-card img {
+    height: 180px;
+  }
+  .features {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+  .feature {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 1.2rem 0.5rem;
+  }
+}
 .product-card {
   background: #f6fff9; /* sanftes Grün statt weiß */
   border-radius: 1.5rem;
@@ -124,13 +176,14 @@ body {
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s;
+  
 }
 .product-card:hover {
   transform: translateY(-8px) scale(1.03);
 }
 .product-card img {
   width: 100%;
-  height: 180px;
+  height: 300px; /* <- Hier die Höhe anpassen */
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
 }
@@ -141,7 +194,7 @@ body {
 }
 .product-card p {
   font-size: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem 1rem;
 }
 .buy-btn {
   background: linear-gradient(90deg, #4ade80 60%, #3b82f6 100%);
